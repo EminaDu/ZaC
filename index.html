@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zombie and Cats</title>
+
+  <style>
+    body {
+    padding: 10px;
+    color: gray;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+   }
+
+  
+    .title {
+      color: gray;
+      font-size: 32px;
+      text-align: center;
+    }
+
+    
+    .overlayImage {
+        position: absolute;
+        height: 30%;
+        max-width: 30%;
+        margin: auto;
+        top: 25%;
+        left: 50%;
+    }
+    .imageWrapper{
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: -1;
+        height: 50%;
+        width: 50%;
+    }
+    #board {
+        width: 25vw;
+        height: 25vh;
+        margin: 5px auto;
+        border-collapse: separate;
+        margin-right: 10px;
+    }
+
+    #board td,
+    #board tr {
+        background-color: lavender;
+        font-size: 20px;
+        text-align: center;
+        border-width: 3px;
+    }
+    #board td {
+        width: 15px;
+        height: 15px;
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+  
+    <div>
+        <img id = "backgroundPicture" src="" class="imageWrapper" alt="Game background image">
+        <img id = "overlayPicture" src="" class="overlayImage" alt="Game ZC image">
+    </div>
+    
+<div class="title">
+    <h2>Zombie and Cat</h2>
+</div>
+
+<div class="button">
+    <table>
+        <tr>
+          <th></th>
+          <th><button id="btnUp" class="up" onclick="moveUp()">Up</button> </button></th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><button id="btnLeft" onclick="moveLeft()"> Left </button></td>
+          <td></td>
+          <td><button id="btnRight" onclick="moveRight()"> Right </button></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button id="btnDown" onclick="moveDown()"> Down </button></td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+</div>
+<table id="board">
+  <tr>
+    <td></td>
+  </tr>
+</table>
+</div>
+        
+    <div id="rest"> 
+     <label id="pointsNo"><br>Points: 0</label>
+      <h2 id="joke"></h2>
+      <h1 id="gameOver" hidden>GAME OVER</h1>
+ 
+    </div>
+    <div>
+        <br>
+        <input type="button" name="restart" id="btnRst" value="Restart" onclick="restart()">
+    </div>
+  <script src="script/script.js"></script>
+</body>
+
+</html>
